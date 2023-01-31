@@ -43,3 +43,20 @@ is at following locations:
 - The project file `AutomationTestSample.csproj` defines the `SpaProxyServerUrl` and the `SpaProxyLaunchCommand`
 
 
+## Detains on API and UI Automation for the given application
+- <b>Functional API Tests:</b> Framework is created using C#, Xunit, HttpClient, AutoFixture, Fluent-Assertions
+- <b>PACT API Contract Testing:</b> Framework using PactNet for contract testing, Xunit
+- - To execute Functional API tests and PACT tests, simply go to Test Explorer in Visual Studio.
+- - Select all tests and Run tests
+     ![image](https://user-images.githubusercontent.com/4996330/215808261-10a786e0-d5ce-4ca2-9331-72344af32d5f.png)
+- - Note: Some tests might fails and are intentional as mentioned in test or test data description 
+     ![image](https://user-images.githubusercontent.com/4996330/215808623-8ccefdc6-005c-4d99-a7e6-7731982cd20e.png)
+
+  
+- <b>UI Testing:</b> using Cypress in javascript to do this and is in progress. Maybe 1 more day to finish this.
+- - For detailed guide on setting up Cypress and execution refer:
+     https://github.com/YagneshShah/AutomationSampleApiAndUI/blob/main/AutomationTestSample/ClientApp/README.md
+- - Sample Cypress execution HTML report generated with 1 failed test to show how to debug along with screenshot attached:
+    ![image](https://user-images.githubusercontent.com/4996330/215817120-5a0a80b0-0ea4-466b-a7e1-6abc87ce922d.png)
+    ![image](https://user-images.githubusercontent.com/4996330/215817408-fa5cbe0d-7c58-4067-84d9-588d1bcef721.png)     
+
