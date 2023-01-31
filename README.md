@@ -43,7 +43,7 @@ is at following locations:
 - The project file `AutomationTestSample.csproj` defines the `SpaProxyServerUrl` and the `SpaProxyLaunchCommand`
 
 
-## Detains on API and UI Automation for the given application
+## Details on API and UI Automation for the given application
 - <b>Functional API Tests:</b> Framework is created using C#, Xunit, HttpClient, AutoFixture, Fluent-Assertions
 - <b>PACT API Contract Testing:</b> Framework using PactNet for contract testing, Xunit
 - - To execute Functional API tests and PACT tests, simply go to Test Explorer in Visual Studio.
