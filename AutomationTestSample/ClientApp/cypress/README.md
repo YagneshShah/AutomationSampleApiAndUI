@@ -21,6 +21,9 @@
         https://testing-library.com/docs/cypress-testing-library/intro/
 		https://github.com/testing-library/cypress-testing-library#differences-from-dom-testing-library
         
+    * cypress-mochawesome-reporter: Zero config Mochawesome reporter for Cypress with screenshots attached to tests
+        reference:
+        https://github.com/LironEr/cypress-mochawesome-reporter
 
 
 # Setup 
@@ -51,4 +54,9 @@
         Following are different ways to execute in headless mode based on different requirements:
         npx cypress run   <!--- runs all test --->
         npx cypress run --browser electron,chrome,firefox   <!-- execute for specific browser -->
+
+# PDF Reports with screenshots for easy failure debugging
+    * cypress-mochawesome-reporter plugin support will automatically generate the PDF report only when tests are executed via CLI
+    * report can be accessed from directory ./ClientApp/cypress/mochawesome-report/*
+
 
