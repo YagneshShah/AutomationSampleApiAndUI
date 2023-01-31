@@ -1,0 +1,53 @@
+<h2>Automation Test Sample Application</h2>
+<p>This is a sample application to be used for automation tests.</p>
+<p>
+  It uses an in-memory database for managing data for this application. As soon as the application shuts down, all data is lost.
+</p>
+<h3>Overview</h3>
+<p>
+  Everlight is developing a worklist application for managing orders coming in from clients. The MVP involves Everlight's operations team taking orders over the phone,
+  entering them into this system, and then managing the orders from the worklist. The application is partially developed at this stage, but all specifications below refer
+  to the features that <b><i>are currently implemented</i></b>.
+</p>
+<h3>Instructions</h3>
+<ol>
+  <li>Manual Test: List down the test scenarios, test the application and create a bug report</li>
+  <li>Automation:  Create a framework that supports UI and API-based automation that can run from the configured browser (Chrome/Firefox/Edge), with implicit and explicit logging and reporting</li>
+</ol>
+<p>
+  Below is the data model and features for the application in its current version, plus definitions for domain language. You should implement a testing framework that validates the expected behaviour.
+</p>
+<p>Click on the <em>Orders</em> menu on top right to get started.</p>
+<br/><br /><br />
+<h3>Data Model</h3>
+<p><img src="assets\Automation Test Sample App.drawio.png" /></p>
+<ul>
+  <li>A client is a hospital or radiology practice. They are often refered to by their organisation code.</li>
+  <li>An order includes a study (a set of images) scanned at the client's site, such as an xray or MRI, for which Everlight will produce a clinical report</li>
+  <li>The Patient's Mrn is the hospital's Medical Record Number, essentially the patient's unique identifier. Interestingly is it not required to be an actual number by any healthcare protocols.</li>
+  <li>The Order's AccessionNumber is an identifier from the client's systems, grouping one or more studies together. For this exercise, we are assuming there is only ever 1 study in an accession and order.</li>
+  <li>The modality is the type of study, such as an xray or MRI.</li>
+  <li>
+    There are several statuses in a teleradiology workflow:
+    <ul>
+      <li>SC  - the order is scheduled</li>
+      <li>IP  - images are in progress of being sent</li>
+      <li>CM  - images are complete</li>
+      <li>NG  - the study is not for reporting</li>
+      <li>CMD - the report is in transcription</li>
+      <li>ZZ  - the report is ready</li>
+      <li>CA  - the order has been cancedlled</li>
+    </ul>
+  </li>
+</ul>
+<br/>
+<h3>Features</h3>
+<ul>
+  <li>The <em>Orders</em> page shows a list of pre-created orders. These are ordered by the study datetime – the patient that was scanned earliest is the highest priority.</li>
+  <li>There is an option to cancel an order, which currently just deletes the order. This, however, should not delete the patient that it is attached to, in case that patient is attached to other orders.</li>
+  <li>A button called <em>Create New</em> can be used to go to Order Form page which is used to create a new order.</li>
+  <li>When creating a new order, the status is automatically set to SC. The development team is yet to implement any features related to changing the status.</li>
+  <li>If the MRN matches an existing patient, then that patient record will get linked to the new order.</li>
+  <li>The API verbs for Patient and Order have been implemented, and can be reached at api/Orders and api/Patients respectively.</li>
+  <li>The API verbs for Client and Site are yet to be implemented. Status and Modality are fairly static within the domain and so API verbs are not likely to be implemented in the applicatin; any changes required would be handled by the development team.</li>
+</ul>

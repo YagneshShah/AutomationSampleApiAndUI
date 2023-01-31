@@ -1,0 +1,10 @@
+{
+    "extends": [
+        "plugin:cypress/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+      },
+    "parser": "@typescript-eslint/parser"
+}

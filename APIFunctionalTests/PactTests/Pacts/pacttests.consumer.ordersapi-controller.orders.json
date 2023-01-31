@@ -1,0 +1,135 @@
+{
+  "consumer": {
+    "name": "PactTests.Consumer.OrdersApi"
+  },
+  "provider": {
+    "name": "Controller.Orders"
+  },
+  "interactions": [
+    {
+      "description": "A POST request to Orders api should create order with no response",
+      "providerState": "There is a post orders api",
+      "request": {
+        "method": "post",
+        "path": "/api/orders",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "PatientMrn": "PatientMrnf0600351-2714-46d6-a2da-94faa65818d9",
+          "PatientFirstName": "PatientFirstName068f1cb9-8d7b-4684-8139-7bb6c639129a",
+          "PatientLastName": "PatientLastNameaea5cc57-cc4d-47b2-94d8-005403924c5e",
+          "AccessionNumber": "AccessionNumber635a591e-1bb5-44cc-8df6-2c47124f9cdd",
+          "OrgCode": "OrgCodeae85a4bc-69f2-47ac-8c40-e3e61e8190d3",
+          "SiteId": 199,
+          "Modality": "Modality6ec18809-f45c-4a1a-9c8e-81fba6c5a559",
+          "StudyDateTime": "2024-09-09T00:46:38.745084+10:00"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+        }
+      }
+    },
+    {
+      "description": "A GET request to OrdersById api should retrieve order details",
+      "providerState": "There is a OrderById api",
+      "request": {
+        "method": "get",
+        "path": "/api/orders/101",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "json_class": "Pact::SomethingLike",
+          "contents": {
+            "Id": 135,
+            "AccessionNumber": "AccessionNumber2de851fd-6528-473f-9739-492d1c32b3a8",
+            "OrgCode": "OrgCode366618c2-fdb5-4d6f-9e0a-f8a81ed7f001",
+            "SiteName": "SiteName332939e8-1bb0-431f-94d6-a383fadc1c4b",
+            "PatientMrn": "PatientMrnfc07ca22-8e9b-4636-83ed-28f72956b467",
+            "PatientName": "PatientName25022495-d7ff-4e0f-94ad-119ad3f23fb7",
+            "Modality": "Modality1449e6d5-8b78-4f56-a7e3-482c1c6776fa",
+            "StudyDateTime": "2021-03-30T02:59:27.7590375+11:00",
+            "Status": "Status5c0cf16d-e009-4ad1-baec-1c5ea17a3a7f",
+            "CreatedAt": "2024-07-05T17:15:49.8431509+10:00",
+            "UpdatedAt": "2023-11-04T23:37:01.2544487+11:00"
+          }
+        }
+      }
+    },
+    {
+      "description": "A GET request to Orders api should retrieve list of orders",
+      "providerState": "There is a Orders api",
+      "request": {
+        "method": "get",
+        "path": "/api/orders",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "json_class": "Pact::SomethingLike",
+          "contents": [
+            {
+              "Id": 182,
+              "AccessionNumber": "AccessionNumberab0e3b1c-3b62-4934-bc9b-a6cb643c80dc",
+              "OrgCode": "OrgCode99a80195-77a7-403b-9bc5-216788f8a620",
+              "SiteName": "SiteName02b58bec-c0f5-4c02-8bcb-2c5385aad618",
+              "PatientMrn": "PatientMrn8af3c53e-5a0a-433d-bc93-1710b6e690f6",
+              "PatientName": "PatientNamebd549101-95d6-4b36-be34-515af959a27a",
+              "Modality": "Modality4995fb99-0459-45e0-896f-e5e8dd5420d0",
+              "StudyDateTime": "2024-08-11T03:37:57.6713744+10:00",
+              "Status": "Status42b4fdc0-1e10-4d51-b2c7-5acaf72309c7",
+              "CreatedAt": "2022-05-22T00:46:25.2687807+10:00",
+              "UpdatedAt": "2024-07-11T04:17:37.1132565+10:00"
+            },
+            {
+              "Id": 59,
+              "AccessionNumber": "AccessionNumber25a82dc4-dfee-487e-92d1-2942570fb351",
+              "OrgCode": "OrgCode64985686-2346-4773-8f13-ff3beb318992",
+              "SiteName": "SiteName207ed6f6-c92b-4696-8ca0-99873535d343",
+              "PatientMrn": "PatientMrn243e6cfd-3297-4e0a-bcc0-f50ae4f8d8cc",
+              "PatientName": "PatientName848ea397-c338-44c6-b6d4-0efafcd1d8cb",
+              "Modality": "Modality0e1afa3c-0356-4927-846d-183f2163e97c",
+              "StudyDateTime": "2022-06-14T19:12:04.1377966+10:00",
+              "Status": "Statusce6a180f-8cd7-4de7-821c-8facddb8bccc",
+              "CreatedAt": "2023-10-15T18:20:55.6149076+11:00",
+              "UpdatedAt": "2022-03-30T06:15:18.788012+11:00"
+            },
+            {
+              "Id": 139,
+              "AccessionNumber": "AccessionNumberda215f95-39bb-4e3a-bca5-1f97857304b5",
+              "OrgCode": "OrgCodee6b6814a-38ae-4ad2-8b26-b59bf433ddb4",
+              "SiteName": "SiteName1c2e79b1-5b18-46a6-bcba-c3d48b2e7a84",
+              "PatientMrn": "PatientMrn31e62e7b-0ddd-4480-9116-7607d3a9ff15",
+              "PatientName": "PatientName2fb08488-d090-4979-aab7-f071926839d2",
+              "Modality": "Modalityfeab828b-e0d2-43f4-8a66-7d6555c69732",
+              "StudyDateTime": "2021-07-22T22:54:39.5986651+10:00",
+              "Status": "Status53f28a81-d5b2-4302-8e72-324e7e2b18a8",
+              "CreatedAt": "2021-05-01T22:43:52.585015+10:00",
+              "UpdatedAt": "2024-07-17T14:15:44.7860628+10:00"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "1.0.0"
+    }
+  }
+}

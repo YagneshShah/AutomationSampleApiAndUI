@@ -1,0 +1,38 @@
+{
+  "baseUrl": "https://localhost:44449/",
+  "experimentalStudio": true,
+  "pageLoadTimeout": 50000,
+  "defaultCommandTimeout": 20000,
+  "testFiles": ["**/*.spec.js", "**/*.spec.ts", "**/*.feature"],
+  "env": {
+		"TAGS": "@orders"
+	},
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
+  "integrationFolder": "cypress/integration",
+  "fixturesFolder": "cypress/fixtures",
+  "pluginsFile": "cypress/plugins/index.ts",
+  "supportFile": "cypress/support/index.ts",
+  "screenshotsFolder": "cypress/screenshots",
+  "videosFolder": "cypress/videos",
+  "downloadsFolder": "cypress/downloads",
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir":"cypress/mochawesome-report",
+    "reportFilename": "mochawesome",
+    "timestamp": "yyyy-mm-dd_HH-MM-ss",
+    "charts": true,
+    "reportPageTitle": "custom-title",
+    "embeddedScreenshots": true,
+    "overwrite": false,
+    "saveHtml": true,
+    "saveJson": true,
+    "toConsole": true
+  },
+  "screenshotOnRunFailure": true,
+  "video": false,
+  "nodeVersion": "bundled"
+}
+

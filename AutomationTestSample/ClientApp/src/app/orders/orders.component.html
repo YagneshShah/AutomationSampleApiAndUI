@@ -1,0 +1,34 @@
+<h1 id="tableLabel">Orders</h1>
+
+<button type="button" class="btn btn-primary" [routerLink]="['/new-order']">Create New</button>
+
+<p *ngIf="!orders"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+  <thead>
+    <tr>
+      <th>Accession Number</th>
+      <th>Org Code</th>
+      <th>Site Name</th>
+      <th>Patient MRN</th>
+      <th>Patient Name</th>
+      <th>Modality</th>
+      <th>Study DateTime</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.accessionNumber }}</td>
+      <td>{{ order.orgCode }}</td>
+      <td>{{ order.siteName }}</td>
+      <td>{{ order.patientMrn }}</td>
+      <td>{{ order.patientName }}</td>
+      <td>{{ order.modality }}</td>
+      <td>{{ order.studyDateTime | date:'dd/MM/yyyy HH:mm:ss' }}</td>
+      <td>{{ order.status }}</td>
+      <td><i role='button' class="bi bi-x cursor-pointer" (click)="deleteOrder(order)"></i></td>
+    </tr>
+  </tbody>
+</table>
