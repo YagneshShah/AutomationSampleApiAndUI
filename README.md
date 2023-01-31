@@ -57,7 +57,7 @@ is at following locations:
   ![image](https://user-images.githubusercontent.com/4996330/215808623-8ccefdc6-005c-4d99-a7e6-7731982cd20e.png)
 
   
-#### UI Testing: using Cypress in javascript to do this and is in progress. Maybe 1 more day to finish this.
+#### UI Testing: using Cypress in javascript/typescript
 - For detailed guide on setting up Cypress and execution refer:
   https://github.com/YagneshShah/AutomationSampleApiAndUI/blob/main/AutomationTestSample/ClientApp/README.md
 - Sample Cypress execution HTML report generated with 1 failed test to show how to debug along with screenshot attached:
