@@ -59,7 +59,7 @@ is at following locations:
   
 #### UI Testing: using Cypress in javascript/typescript
 - For detailed guide on setting up Cypress and execution refer:
-  https://github.com/YagneshShah/AutomationSampleApiAndUI/blob/main/AutomationTestSample/ClientApp/README.md
+  https://github.com/YagneshShah/AutomationSampleApiAndUI/blob/main/AutomationTestSample/ClientApp/cypress/README.md
 - Sample Cypress execution HTML report generated with 1 failed test to show how to debug along with screenshot attached:
   ![image](https://user-images.githubusercontent.com/4996330/215817120-5a0a80b0-0ea4-466b-a7e1-6abc87ce922d.png)
   ![image](https://user-images.githubusercontent.com/4996330/215817408-fa5cbe0d-7c58-4067-84d9-588d1bcef721.png)     
